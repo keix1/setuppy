@@ -25,10 +25,10 @@ pip list | grep sampleA
 
 - `__init__.py`
 - `setup.py`のpackage部分
-    - ```python
-    packages=find_packages(where='src'), 
-    package_dir={'': 'src'}
-    ```
+```python
+packages=find_packages(where='src'), 
+package_dir={'': 'src'}
+```
 
 ### Uninstall on Local develop
 
