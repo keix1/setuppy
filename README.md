@@ -11,6 +11,17 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 - commandラインツールもinstallできる
 - twineを使えばPyPIにアップロードして普通にpip installもできるようになる
 
+## 本レポのディレクトリ構造
+
+.
+├── setup.py
+├── sample
+│   ├── __init__.py
+│   ├── hoge.py
+│   └── sample.py
+└── test
+    └── test.py
+
 ## Local develop
 
 ### Install on Local develop
