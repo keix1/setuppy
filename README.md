@@ -6,6 +6,7 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 
 - 今までは頑張って`sys.path.append()`で自作モジュールをimportしていたが、相対パスを考えたりしなくてはならず面倒だった
 - setuptoolsなら自作モジュールを一発入魂できる
+    - どこからでもimportできる
 - GitHubからもpip installできる
 - commandラインツールもinstallできる
 - twineを使えばPyPIにアップロードして普通にpip installもできるようになる
@@ -14,7 +15,7 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 
 ### Install on Local develop
 
-ローカルファイルを更新すると即座に更新が反映される。
+インストール
 
 ```sh
 cd setuppy
@@ -26,6 +27,14 @@ python setup.py develop
 ```sh
 pip list | grep sampleA
 ```
+
+実行
+
+```sh
+python test/test.py
+```
+
+ローカルファイルを更新すると即座に更新が反映される。
 
 開発用途ならこれで良さそう。
 
