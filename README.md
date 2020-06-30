@@ -2,6 +2,13 @@
 
 setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 
+## 自作モジュールについて
+
+- 今までは頑張って`sys.path.append()`で自作モジュールをimportしていたが、相対パスを考えたりしなくてはならず面倒だった。
+- setuptoolsならモジュールを一発入魂できる。
+- PyPIにアップロードしてpip installもできる
+- GitHubからもpip installできる
+
 ## Local develop
 
 ### Install on Local develop
