@@ -13,6 +13,7 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 
 ## 本レポのディレクトリ構造
 
+```
 .
 ├── setup.py
 ├── sample
@@ -21,6 +22,7 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 │   └── sample.py
 └── test
     └── test.py
+```
 
 ## Local develop
 
