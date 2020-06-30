@@ -74,19 +74,19 @@ cd setuppy
 pip install .
 ```
 
-### pip uninstall
-
-```sh
-pip uninstall SampleA
-```
-
 ### pip install from GitHub
 
 ```sh
 pip install git+https://github.com/keix1/setuppy.git
 ```
 
-### コマンドラインツールとして使う
+### pip uninstall
+
+```sh
+pip uninstall SampleA
+```
+
+## コマンドラインツールとして使う
 
 - 本レポをInstall済みであれば`sample_command`が使えるようになっている
 
