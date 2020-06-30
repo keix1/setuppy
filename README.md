@@ -2,12 +2,13 @@
 
 setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 
-## 自作モジュールについて
+## setuptoolsについて
 
-- 今までは頑張って`sys.path.append()`で自作モジュールをimportしていたが、相対パスを考えたりしなくてはならず面倒だった。
-- setuptoolsならモジュールを一発入魂できる。
-- PyPIにアップロードしてpip installもできる
+- 今までは頑張って`sys.path.append()`で自作モジュールをimportしていたが、相対パスを考えたりしなくてはならず面倒だった
+- setuptoolsなら自作モジュールを一発入魂できる
 - GitHubからもpip installできる
+- commandラインツールもinstallできる
+- twineを使えばPyPIにアップロードして普通にpip installもできるようになる
 
 ## Local develop
 
@@ -16,7 +17,7 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 ローカルファイルを更新すると即座に更新が反映される。
 
 ```sh
-cd sample_project
+cd setuppy
 python setup.py develop
 ```
 
@@ -31,40 +32,55 @@ pip list | grep sampleA
 ### developインストールするなら下記は省いても動いた
 
 - `__init__.py`
-- `setup.py`の下記package部分
-```python
-packages=find_packages(where='src'), 
-package_dir={'': 'src'}
-```
+- `setup.py`の下記packagesとentry_points部分
 
 ### Uninstall on Local develop
 
-```
+```sh
 python setup.py develop -u
 ```
 
 ## pip
 
-上記で触れた`__init__.py`と`setup.py`のpackage記述がいる模様
+上記で触れた`__init__.py`と`setup.py`のpackage記述がいる
 
 ### pip install
 
-```
-cd sample_project
+```sh
+cd setuppy
 pip install .
 ```
 
 ### pip uninstall
 
-```
+```sh
 pip uninstall SampleA
 ```
 
+### pip install from GitHub
+
+```sh
+pip install git+https://github.com/keix1/setuppy.git
+```
+
+### コマンドラインツールとして使う
+
+- Install済みであれば`sample_command`が使えるようになっている
+
+```sh
+sample_command
+```
+
+- `setup.py`の`entry_points`の`console_scripts`がCLIツール指定するための記述
+
 ## わかったこと
 
-develop installでは`.egg-info`に関係性が保存されてる様子
+- develop installでは`.egg-info`に関係性が保存されてる様子
+- `__init__.py`は空ファイルでもいいみたい
+- CLIツールとして使えるのちょっとやばい
 
 ## 参考
 
 - [Python 自作モジュールのパッケージ化](https://gist.github.com/3panda/7508508a89bd1ea1990217142eaf3c9c)
 - [Python: Twine を使って PyPI にパッケージをアップロードする](https://blog.amedama.jp/entry/2017/12/31/175036)
+- [Pythonで作ったコマンドをGitHub経由でpipインストール可能にする](https://dev.classmethod.jp/articles/pip-install-via-github-command/)
