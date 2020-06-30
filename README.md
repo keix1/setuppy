@@ -36,7 +36,11 @@ package_dir={'': 'src'}
 python setup.py develop -u
 ```
 
-## pip install
+## pip
+
+上記で触れた`__init__.py`と`setup.py`のpackage記述がいる模様
+
+### pip install
 
 ```
 cd sample_project
