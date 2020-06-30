@@ -24,7 +24,7 @@ pip list | grep sampleA
 ### developインストールするなら下記は省いても動いた
 
 - `__init__.py`
-- `setup.py`のpackage部分
+- `setup.py`の下記package部分
 ```python
 packages=find_packages(where='src'), 
 package_dir={'': 'src'}
