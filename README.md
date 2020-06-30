@@ -1,6 +1,6 @@
 # setuppy
 
-setup.pyを試してみたリポジトリです。
+setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 
 ## Local develop
 
