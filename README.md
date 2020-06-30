@@ -53,7 +53,7 @@ python test/test.py
 ### developインストールするなら下記は省いても動いた
 
 - `__init__.py`
-- `setup.py`の下記packagesとentry_points部分
+- `setup.py`のpackagesとentry_points部分
 
 ### Uninstall on Local develop
 
