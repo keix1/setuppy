@@ -5,10 +5,10 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 ## setuptoolsについて
 
 - 今までは頑張って`sys.path.append()`で自作モジュールをimportしていたが、相対パスを考えたりしなくてはならず面倒だった
-- setuptoolsなら自作モジュールを一発入魂できる
+- setuptoolsなら自作モジュールをpipや開発環境に一発入魂できる
     - どこからでもimportできる
 - GitHubからもpip installできる
-- commandラインツールもinstallできる
+- コマンドラインツールもinstallできる
 - twineを使えばPyPIにアップロードして普通にpip installもできるようになる
 
 ## 本レポのディレクトリ構造
@@ -25,6 +25,9 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 ```
 
 ## Local develop
+
+- ローカルファイルを更新すると即座に更新が反映される。
+- 開発用途ならこれで良さそう。
 
 ### Install on Local develop
 
@@ -47,10 +50,6 @@ pip list | grep sampleA
 python test/test.py
 ```
 
-ローカルファイルを更新すると即座に更新が反映される。
-
-開発用途ならこれで良さそう。
-
 ### developインストールするなら下記は省いても動いた
 
 - `__init__.py`
@@ -64,7 +63,9 @@ python setup.py develop -u
 
 ## pip
 
-上記で触れた`__init__.py`と`setup.py`のpackage記述がいる
+- GitHubに置けばGitHubから配布が可能になる
+- 当然だがスクリプトを更新したら再度pip installする必要がある
+- 上記で触れた`__init__.py`と`setup.py`のpackage記述がいる
 
 ### pip install
 
@@ -87,13 +88,13 @@ pip install git+https://github.com/keix1/setuppy.git
 
 ### コマンドラインツールとして使う
 
-- Install済みであれば`sample_command`が使えるようになっている
+- 本レポをInstall済みであれば`sample_command`が使えるようになっている
 
 ```sh
 sample_command
 ```
 
-- `setup.py`の`entry_points`の`console_scripts`がCLIツール指定するための記述
+- `setup.py`の`entry_points`の`console_scripts`がCLIツール指定するための記述になっている
 
 ## わかったこと
 
