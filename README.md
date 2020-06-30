@@ -6,12 +6,14 @@ setuptoolsを使ってsetup.pyを試してみたリポジトリです。
 
 ### Install on Local develop
 
+ローカルファイルを更新すると即座に更新が反映される。
+
 ```sh
 cd sample_project
 python setup.py develop
 ```
 
-ローカルファイルを更新すると即座に更新が反映される。
+確認
 
 ```sh
 pip list | grep sampleA
