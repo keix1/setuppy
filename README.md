@@ -1,6 +1,11 @@
-# setuppy
+# 【Python】setuptoolsで自作モジュールを一発入魂
 
-setuptoolsを使ってsetup.pyを試してみたリポジトリです。
+- setuptoolsを使ってsetup.pyを試してみたリポジトリです
+- できるだけ簡素な状態のリポジトリでパッと見てサクッと使えるように作りました
+- pipを使ってgitから一発インストールできます
+```sh
+pip install git+https://github.com/keix1/setuppy.git
+```
 
 ## setuptoolsについて
 
